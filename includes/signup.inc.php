@@ -14,10 +14,6 @@ if (isset($_POST['signup-submit']))
       header("Location: ../signup.php?error=emptyfields&".$username."&mail=".$email);
       exit();
     }
-    else if ()
-    {
-
-    }
 
 
 }
