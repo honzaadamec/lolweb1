@@ -3,7 +3,7 @@
  ?>
 
       <main>
-        <p>Jsi odhlasssen</p>
+        <p>Jsi odhlasen</p>
         <p>Jsi prihlasen</p>
       </main>
 
