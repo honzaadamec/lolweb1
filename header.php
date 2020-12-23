@@ -20,7 +20,7 @@
           <form action="includes/login.inc.php" method="post">
 <!--post method je pro secure, je to cast kterou uzivatel nevidi, budou v nem scripty jakou jsou login logout atd..-->
             <input type="text" name="mailuid" placeholder="E-mail...">
-            <input type="password" name="pwd" placeholder="password...">
+            <input type="password" name="pwd" placeholder="Password...">
             <button type="submit" name="login-submit">Login</button>
           </form>
         <a href="signup.php">Signup</a>
