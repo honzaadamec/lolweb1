@@ -11,7 +11,7 @@ if (isset($_POST['signup-submit']))
 
    if (empty($username) || empty($email) || empty($password) || empty($passwordRepeat))
     {
-      header("Location: /signup.php?error=emptyfields&".$username."&mail=".$email);
+      header("Location: ../signup.php?error=emptyfields&".$username."&mail=".$email);
       exit();
     }
     else if ()
