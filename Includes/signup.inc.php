@@ -8,12 +8,12 @@ $email = $_POST['mail']
 $password = $_POST['pwd']
 $passwordRepeat = $_POST['pwd-repeat']
 
-  if (empty($username) || empty($username) || empty($username) || empty($username)){
-    header("Location: ../signup.php?error=emptyfields&uid=".$username."&mail=".$email);
+  if (empty($username) || empty($email) || empty($password) || empty($passwordRepeat)){
+    header("Location: /var/www/html/signup.php?error=emptyfields&uid=".$username."&mail=".$email);
     exit();
   }
   else if (){
-    
+
   }
 
 
