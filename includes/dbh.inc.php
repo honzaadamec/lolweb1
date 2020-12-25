@@ -1,6 +1,6 @@
 <?php
 
-$servername = "123";
+$servername = "localhost";
 $dBUsername = "root";
 $dBPassword = "25256314789C";
 $dBname = "loginsystem";
