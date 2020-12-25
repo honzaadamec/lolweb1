@@ -2,11 +2,7 @@
 if (isset($_POST['signup-submit'])){
 
   require 'dbh.inc.php';
-  if (!$conn){
-  die("Connection failed: ".mysqli_connect_error());
-  header("Location: ../signup.php?errorconn");
-  exit();
-  }
+
 
   $username = $_POST['uid'];
   $email = $_POST['mail'];
