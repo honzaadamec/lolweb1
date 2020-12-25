@@ -2,6 +2,11 @@
 if (isset($_POST['signup-submit'])){
 
   require 'dbh.inc.php';
+  if (!$conn){
+  die("Connection failed: ".mysqli_connect_error());
+  header("Location: ../signup.php?errorconn");
+  exit();
+  }
 
   $username = $_POST['uid'];
   $email = $_POST['mail'];
@@ -31,7 +36,7 @@ if (isset($_POST['signup-submit'])){
     $sql = "SELECT uidUsers FROM users WHERE uidUsers=?";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-      header("Location: ../signup.php?error=sqlerror");
+      header("Location: ../signup.php?error=sqlerror1");
       exit();
     }
     else {
@@ -47,7 +52,7 @@ if (isset($_POST['signup-submit'])){
         $sql = "INSERT INTO user (uidUsers, emailUser, pwd Users) VALUES (?, ?, ?)";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
-          header("Location: ../signup.php?error=sqlerror");
+          header("Location: ../signup.php?error=sqlerror2");
           exit();
         }
       else {
@@ -61,7 +66,9 @@ if (isset($_POST['signup-submit'])){
       }
     }
   }
-  mysqli_stmt_close($stmt);
+  if($stmt = mysqli_prepare($sql)){
+    mysqli_stmt_close($stmt);    
+  }
   mysqli_close($conn);
 }
 else{
