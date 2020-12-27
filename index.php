@@ -5,10 +5,10 @@
       <main>
         <?php
           if (isset($_SESSION['userId'])) {
-            echo '<p>Jsi odhlasen</p>';
+            echo '<p>Jsi prihlasen</p>';
           }
           else {
-            echo '<p>Jsi prihlasen</p>';
+            echo '<p>Jsi odhlasen</p>';
           }
          ?>
       </main>
