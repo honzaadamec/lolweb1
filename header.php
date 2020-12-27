@@ -32,9 +32,6 @@
               <a href="signup.php">Signup</a>';
               }
            ?>
-          <form action="includes/logout.inc.php" method="post">
-            <button type="submit" name="logout-submit">Logout</button>
-          </form>
       </nav>
     </header>
   </body>
