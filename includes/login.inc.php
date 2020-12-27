@@ -24,7 +24,7 @@ $password = $_POST['pwd'];
       if ($row = mysqli_fetch_assoc($result)) {
         $pwdCheck = password_verify($password, $row['pwdUsers']);
         if ($pwdCheck == false) {
-          header("Location: ../index.php?error=wrongpwd");
+          header("Location: ../index.php?error=wrongpwd1");
           exit();
         }
         else if ($pwdCheck == true) {
@@ -35,12 +35,12 @@ $password = $_POST['pwd'];
           exit();
         }
         else {
-          header("Location: ../index.php?error=wrongpwd");
+          header("Location: ../index.php?error=wrongpwd2");
           exit();
         }
       }
       else {
-        header("Location: ../index.php?error=sqlerror3");
+        header("Location: ../index.php?error=sqlerror4");
         exit();
       }
     }
