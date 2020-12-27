@@ -13,7 +13,7 @@ $password = $_POST['pwd'];
   else {
     $sql = "SELECT * FROM users WHERE uidUsers=? OR emailUsers=?;";
     $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_close($stmt, $sql)) {
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
       header("Location: ../index.php?error=sqlerror3");
       exit();
     }
